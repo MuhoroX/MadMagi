@@ -467,6 +467,8 @@ body.nav-active { overflow: hidden; }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: rgba(3, 3, 3, 0.5);
+  background-blend-mode: multiply; /*multiply / darken / lighten */
 }
 
 .input-field {
@@ -1499,13 +1501,20 @@ textarea.input-field {
 
   .about .container { gap: 80px; }
 
-  .about-banner > .w-100 { padding-inline-start: 90px; }
+  .about-banner > .w-100 { padding-inline-start: 90px;}
 
   .about .abs-img-1 { width: 285px; }
 
   .about .contact-number { --fontSize-body-1: 2.4rem; }
 
-
+.about-banner .w-1002 {
+  border-bottom-right-radius: 70px;
+    box-shadow: 107px 99px 105px -41px rgba(174, 174, 174, 0.15);
+}
+.about-banner .w-1001 {
+  border-bottom-right-radius: 10px; border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px; border-top-left-radius: 10px;
+}
 
   /**
    * MENU
@@ -2070,7 +2079,7 @@ textarea.input-field {
 
  /* Lightbox Styles */
 .lightbox {
-  display: none; /* مخفي افتراضيًا */
+  display: none;
   position: fixed;
   z-index: 9999;
   padding-top: 80px;
