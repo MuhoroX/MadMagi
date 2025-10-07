@@ -959,7 +959,7 @@ max-width: max-content;
 
 .about .container {
   display: grid;
-  gap: 120px;
+  gap: 70px;
 }
 
 .about-banner {
