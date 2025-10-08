@@ -158,6 +158,12 @@ window.addEventListener("mousemove", function (event) {
 
 });
 
+
+
+
+
+
+
 // image model
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -211,6 +217,35 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+
+ // دعم السحب (Swipe) في Lightbox على الهاتف
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightboxImg.addEventListener("touchstart", function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  lightboxImg.addEventListener("touchend", function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  });
+
+  function handleSwipeGesture() {
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) { // لتجنب الحركات الصغيرة
+      if (diff > 0) {
+        // سحب نحو اليسار ➜ التالي
+        currentIndex = (currentIndex + 1) % imgList.length;
+      } else {
+        // سحب نحو اليمين ➜ السابق
+        currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+      }
+      lightboxImg.src = imgList[currentIndex].src;
+      captionText.innerHTML = imgList[currentIndex].alt;
+    }
+  }
 
 
 // moobile touching 
