@@ -164,93 +164,76 @@ window.addEventListener("mousemove", function (event) {
 
 
 
-// image model
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+  // === Lightbox Variables & Setup ===
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const captionText = document.getElementById("caption");
   const closeBtn = document.querySelector(".close");
 
-  // اجعل كل الصور القابلة للنقر تفتح lightbox
   const images = document.querySelectorAll("img.img-cover, .menu-card img, .about-banner img");
-  const imgList = Array.from(images); // نحول NodeList إلى Array للتنقل
-  let currentIndex = -1; // لتخزين الصورة الحالية في Lightbox  
+  const imgList = Array.from(images);
+  let currentIndex = -1;
 
-  
   images.forEach((img, index) => {
     img.style.cursor = "pointer";
-    img.addEventListener("click", function() {
-      currentIndex = index; // حفظ موقع الصورة
+    img.addEventListener("click", function () {
+      currentIndex = index;
       lightbox.style.display = "block";
       lightboxImg.src = this.src;
       captionText.innerHTML = this.alt;
     });
   });
 
-  // إغلاق عند الضغط على ×
-  closeBtn.onclick = function() {
+  closeBtn.onclick = () => {
     lightbox.style.display = "none";
   };
 
-  // إغلاق عند الضغط خارج الصورة
-  lightbox.onclick = function(e) {
+  lightbox.onclick = (e) => {
     if (e.target === lightbox) {
       lightbox.style.display = "none";
     }
   };
 
-  // التعامل مع لوحة المفاتيح
-  document.addEventListener("keydown", function(e) {
-    if (lightbox.style.display === "block") { // إذا الـ lightbox مفتوح
+  document.addEventListener("keydown", function (e) {
+    if (lightbox.style.display === "block") {
       if (e.key === "Escape") {
-        lightbox.style.display = "none"; // Escape يغلق
+        lightbox.style.display = "none";
       } else if (e.key === "ArrowRight") {
-        currentIndex = (currentIndex + 1) % imgList.length; // التالي
+        currentIndex = (currentIndex + 1) % imgList.length;
         lightboxImg.src = imgList[currentIndex].src;
         captionText.innerHTML = imgList[currentIndex].alt;
       } else if (e.key === "ArrowLeft") {
-        currentIndex = (currentIndex - 1 + imgList.length) % imgList.length; // السابق
+        currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
         lightboxImg.src = imgList[currentIndex].src;
         captionText.innerHTML = imgList[currentIndex].alt;
       }
     }
   });
-});
 
-
- // دعم السحب (Swipe) في Lightbox على الهاتف
+  // === Lightbox Swipe Support on Mobile ===
   let touchStartX = 0;
   let touchEndX = 0;
 
-  lightboxImg.addEventListener("touchstart", function(e) {
+  lightboxImg.addEventListener("touchstart", function (e) {
     touchStartX = e.changedTouches[0].screenX;
   });
 
-  lightboxImg.addEventListener("touchend", function(e) {
+  lightboxImg.addEventListener("touchend", function (e) {
     touchEndX = e.changedTouches[0].screenX;
-    handleSwipeGesture();
-  });
-
-  function handleSwipeGesture() {
     const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 50) { // لتجنب الحركات الصغيرة
+    if (Math.abs(diff) > 50) {
       if (diff > 0) {
-        // سحب نحو اليسار ➜ التالي
         currentIndex = (currentIndex + 1) % imgList.length;
       } else {
-        // سحب نحو اليمين ➜ السابق
         currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
       }
       lightboxImg.src = imgList[currentIndex].src;
       captionText.innerHTML = imgList[currentIndex].alt;
     }
-  }
+  });
 
-
-// moobile touching 
-
-document.addEventListener("DOMContentLoaded", function () {
+  // === Hero Slider Swipe Support on Mobile ===
   const slider = document.querySelector("[data-hero-slider]");
   const prevBtn = document.querySelector("[data-prev-btn]");
   const nextBtn = document.querySelector("[data-next-btn]");
@@ -261,24 +244,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (slider) {
     slider.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
-    });
+      endX = startX;
+    }, { passive: true });
 
-    slider.addEventListener("touchmove", (e) => {
-      endX = e.touches[0].clientX;
-    });
-
-    slider.addEventListener("touchend", () => {
+    slider.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
       const diff = startX - endX;
 
       if (Math.abs(diff) > 50) {
         if (diff > 0) {
-          // سحب نحو اليسار = الشريحة التالية
-          nextBtn.click();
+          nextBtn.click(); // Swipe left → next
         } else {
-          // سحب نحو اليمين = الشريحة السابقة
-          prevBtn.click();
+          prevBtn.click(); // Swipe right → previous
         }
       }
-    });
+    }, { passive: true });
   }
 });
