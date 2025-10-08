@@ -543,7 +543,11 @@ body.nav-active { overflow: hidden; }
 
 .preload.loaded {
   transition-delay: 250ms;
-  transform: translateY(100%);
+  transform: translateY(100vh);
+}
+
+.preload.loaded {
+  visibility: hidden;
 }
 
 .circle {
