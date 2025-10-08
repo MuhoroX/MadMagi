@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const captionText = document.getElementById("caption");
   const closeBtn = document.querySelector(".close");
 
-  const images = document.querySelectorAll("img.img-cover, .menu-card img, .about-banner img");
+  const images = document.querySelectorAll(".menu-card img");
   const imgList = Array.from(images);
   let currentIndex = -1;
 
