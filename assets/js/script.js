@@ -159,105 +159,100 @@ window.addEventListener("mousemove", function (event) {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // === Lightbox Variables & Setup ===
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const captionText = document.getElementById("caption");
+  const closeBtn = document.querySelector(".close");
 
+  const images = document.querySelectorAll(".menu-card img");
+  const imgList = Array.from(images);
+  let currentIndex = -1;
 
+  images.forEach((img, index) => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", function () {
+      currentIndex = index;
+      lightbox.style.display = "block";
+      lightboxImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    });
+  });
 
+  closeBtn.onclick = () => {
+    lightbox.style.display = "none";
+  };
 
+  lightbox.onclick = (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  };
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // === Lightbox Variables & Setup ===
-//   const lightbox = document.getElementById("lightbox");
-//   const lightboxImg = document.getElementById("lightbox-img");
-//   const captionText = document.getElementById("caption");
-//   const closeBtn = document.querySelector(".close");
+  document.addEventListener("keydown", function (e) {
+    if (lightbox.style.display === "block") {
+      if (e.key === "Escape") {
+        lightbox.style.display = "none";
+      } else if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % imgList.length;
+        lightboxImg.src = imgList[currentIndex].src;
+        captionText.innerHTML = imgList[currentIndex].alt;
+      } else if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+        lightboxImg.src = imgList[currentIndex].src;
+        captionText.innerHTML = imgList[currentIndex].alt;
+      }
+    }
+  });
 
-//   const images = document.querySelectorAll(".menu-card img");
-//   const imgList = Array.from(images);
-//   let currentIndex = -1;
+  // === Lightbox Swipe Support on Mobile ===
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-//   images.forEach((img, index) => {
-//     img.style.cursor = "pointer";
-//     img.addEventListener("click", function () {
-//       currentIndex = index;
-//       lightbox.style.display = "block";
-//       lightboxImg.src = this.src;
-//       captionText.innerHTML = this.alt;
-//     });
-//   });
+  lightboxImg.addEventListener("touchstart", function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+  });
 
-//   closeBtn.onclick = () => {
-//     lightbox.style.display = "none";
-//   };
+  lightboxImg.addEventListener("touchend", function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        currentIndex = (currentIndex + 1) % imgList.length;
+      } else {
+        currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+      }
+      lightboxImg.src = imgList[currentIndex].src;
+      captionText.innerHTML = imgList[currentIndex].alt;
+    }
+  });
 
-//   lightbox.onclick = (e) => {
-//     if (e.target === lightbox) {
-//       lightbox.style.display = "none";
-//     }
-//   };
+  // === Hero Slider Swipe Support on Mobile ===
+  const slider = document.querySelector("[data-hero-slider]");
+  const prevBtn = document.querySelector("[data-prev-btn]");
+  const nextBtn = document.querySelector("[data-next-btn]");
 
-//   document.addEventListener("keydown", function (e) {
-//     if (lightbox.style.display === "block") {
-//       if (e.key === "Escape") {
-//         lightbox.style.display = "none";
-//       } else if (e.key === "ArrowRight") {
-//         currentIndex = (currentIndex + 1) % imgList.length;
-//         lightboxImg.src = imgList[currentIndex].src;
-//         captionText.innerHTML = imgList[currentIndex].alt;
-//       } else if (e.key === "ArrowLeft") {
-//         currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
-//         lightboxImg.src = imgList[currentIndex].src;
-//         captionText.innerHTML = imgList[currentIndex].alt;
-//       }
-//     }
-//   });
+  let startX = 0;
+  let endX = 0;
 
-//   // === Lightbox Swipe Support on Mobile ===
-//   let touchStartX = 0;
-//   let touchEndX = 0;
+  if (slider) {
+    slider.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      endX = startX;
+    }, { passive: true });
 
-//   lightboxImg.addEventListener("touchstart", function (e) {
-//     touchStartX = e.changedTouches[0].screenX;
-//   });
+    slider.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
 
-//   lightboxImg.addEventListener("touchend", function (e) {
-//     touchEndX = e.changedTouches[0].screenX;
-//     const diff = touchStartX - touchEndX;
-//     if (Math.abs(diff) > 50) {
-//       if (diff > 0) {
-//         currentIndex = (currentIndex + 1) % imgList.length;
-//       } else {
-//         currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
-//       }
-//       lightboxImg.src = imgList[currentIndex].src;
-//       captionText.innerHTML = imgList[currentIndex].alt;
-//     }
-//   });
-
-//   // === Hero Slider Swipe Support on Mobile ===
-//   const slider = document.querySelector("[data-hero-slider]");
-//   const prevBtn = document.querySelector("[data-prev-btn]");
-//   const nextBtn = document.querySelector("[data-next-btn]");
-
-//   let startX = 0;
-//   let endX = 0;
-
-//   if (slider) {
-//     slider.addEventListener("touchstart", (e) => {
-//       startX = e.touches[0].clientX;
-//       endX = startX;
-//     }, { passive: true });
-
-//     slider.addEventListener("touchend", (e) => {
-//       endX = e.changedTouches[0].clientX;
-//       const diff = startX - endX;
-
-//       if (Math.abs(diff) > 50) {
-//         if (diff > 0) {
-//           nextBtn.click(); // Swipe left → next
-//         } else {
-//           prevBtn.click(); // Swipe right → previous
-//         }
-//       }
-//     }, { passive: true });
-//   }  
-// });
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          nextBtn.click(); // Swipe left → next
+        } else {
+          prevBtn.click(); // Swipe right → previous
+        }
+      }
+    }, { passive: true });
+  }  
+});
