@@ -783,7 +783,7 @@ max-width: max-content;
   #HERO
 \*-----------------------------------*/
 
-.hero .slider-btn { display: none; }
+/* .hero .slider-btn { display: none; } */
 
 .hero .img-slider {
   object-fit: cover !important;

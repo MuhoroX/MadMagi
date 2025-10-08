@@ -213,3 +213,37 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// moobile touching 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector("[data-hero-slider]");
+  const prevBtn = document.querySelector("[data-prev-btn]");
+  const nextBtn = document.querySelector("[data-next-btn]");
+
+  let startX = 0;
+  let endX = 0;
+
+  if (slider) {
+    slider.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchmove", (e) => {
+      endX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", () => {
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          // سحب نحو اليسار = الشريحة التالية
+          nextBtn.click();
+        } else {
+          // سحب نحو اليمين = الشريحة السابقة
+          prevBtn.click();
+        }
+      }
+    });
+  }
+});
