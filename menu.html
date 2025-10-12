@@ -356,7 +356,7 @@
               </div>
             </li>
 
-            <li data-type="grill">
+            <li data-type="crispy">
               <div class="menu-card hover:card">
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
                   <img src="./assets/images/menu-9.jpg" width="100" height="100" loading="lazy"
@@ -1013,7 +1013,7 @@
           // تفعيل الزر الحالي
           link.classList.add('active');
 
-          const category = link.textContent.toLowerCase();
+          const category = link.dataset.category;
 
           menuItems.forEach(item => {
             if (category === 'all') {
@@ -1030,7 +1030,8 @@
         });
       });
     });
-  </script>
+ 
+ </script>
 
   <!-- ionicon -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
