@@ -48,6 +48,24 @@ addEventOnElements(navTogglers, "click", toggleNavbar);
 
 
 /**
+ * Close navbar when clicking any link (mobile fix)
+ */
+const allNavLinks = document.querySelectorAll(".navbar-link");
+
+allNavLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    // إذا كانت القائمة مفتوحة
+    if (navbar.classList.contains("active")) {
+      navbar.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.classList.remove("nav-active");
+    }
+  });
+});
+
+
+
+/**
  * HEADER & BACK TOP BTN
  */
 
@@ -158,7 +176,7 @@ window.addEventListener("mousemove", function (event) {
 
 });
 
-
+// change pictures and tap on it
 document.addEventListener("DOMContentLoaded", function () {
   // === Lightbox Variables & Setup ===
   const lightbox = document.getElementById("lightbox");
@@ -256,3 +274,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { passive: true });
   }  
 });
+
+
+// change active in header section
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if(window.scrollY >= sectionTop - 60) { // 60px للمسافة العلوية
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if(link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
+

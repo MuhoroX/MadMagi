@@ -9,12 +9,14 @@
   <!-- Primary meta tags -->
   <title>Mad Magi - Menu</title>
   <meta name="title" content="Mad Magi - Menu">
-  <meta name="description" content="Se hele menuen hos Mad Magi i Munkebo. Autentisk, hjemmelavet syrisk mad med friske råvarer.">
+  <meta name="description"
+    content="Se hele menuen hos Mad Magi i Munkebo. Autentisk, hjemmelavet syrisk mad med friske råvarer.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mad Magi - Menu">
-  <meta property="og:description" content="Oplev alle retterne på vores menu. Hjemmelavet syrisk mad i hjertet af Munkebo.">
+  <meta property="og:description"
+    content="Oplev alle retterne på vores menu. Hjemmelavet syrisk mad i hjertet af Munkebo.">
   <meta property="og:site_name" content="Mad Magi">
   <meta property="og:locale" content="da_DK">
 
@@ -33,7 +35,7 @@
 <body id="top">
 
   <!-- PRELOADER -->
-  <div class="preload" data-preaload >
+  <div class="preload" data-preaload>
     <div class="circle" style="text-align: center;"></div>
     <p class="text" style="text-align: center;">Mad Magi Menu</p>
   </div>
@@ -57,18 +59,35 @@
         </a>
 
         <ul class="navbar-list">
+
           <li class="navbar-item">
-            <a href="index.html#home" class="navbar-link hover-underline">Hjem</a>
+            <a href="./index.html#home" class="navbar-link hover-underline ">
+              <div class="separator"></div>
+              <span class="span">Hjem</span>
+            </a>
           </li>
+
           <li class="navbar-item">
-            <a href="menu.html" class="navbar-link hover-underline active">Menu</a>
+            <a href="#" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+              <span class="span">Menu</span>
+            </a>
           </li>
+
           <li class="navbar-item">
-            <a href="index.html#about" class="navbar-link hover-underline">Om os</a>
+            <a href="./index.html#about" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Om os</span>
+            </a>
           </li>
+
           <li class="navbar-item">
-            <a href="index.html#contact" class="navbar-link hover-underline">Kontakt</a>
+            <a href="./index.html#contact" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Kontakt</span>
+            </a>
           </li>
+
         </ul>
 
         <div class="text-center">
@@ -107,43 +126,47 @@
   <main>
     <article>
       <!-- MENU -->
-            <section class="section menu" aria-label="menu-label" id="menu" style="background: -moz-element;background-color: var(--smoky-black-1);">
+      <section class="section menu" aria-label="menu-label" id="menu"
+        style="background: -moz-element;background-color: var(--smoky-black-1);">
         <div class="container">
 
           <p class="section-subtitle text-center label-2 menu-section-subtitle">Særligt udvalg</p>
 
           <h2 class="headline-1 section-title text-center menu-section-title">Lækker menu</h2>
 
-        <ul class="navbar-list-menu">
-          <li class="navbar-item">
-            <a href="index.html#home" class="navbar-link hover-underline">Hjem</a>
-          </li>
-          <li class="navbar-item">
-            <a href="menu.html" class="navbar-link hover-underline active">Menu</a>
-          </li>
-          <li class="navbar-item">
-            <a href="index.html#about" class="navbar-link hover-underline">Om os</a>
-          </li>
-          <li class="navbar-item">
-            <a href="index.html#contact" class="navbar-link hover-underline">Kontakt</a>
-          </li>
-        </ul>
+          <ul class="navbar-list navbar-list-menu">
+            <li class="navbar-item">
+              <a href="#" class="navbar-link active" data-category="all">All</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-link" data-category="grill">Grill</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-link" data-category="grill-family">Grill-Family</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-link" data-category="crispy">Crispy</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="navbar-link" data-category="appetizers">Appetizers</a>
+            </li>
+          </ul>
 
           <ul class="grid-list">
 
-            <li>
+            <li data-type="grill">
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.jpg" width="150" height="150" loading="lazy" alt="Lammespyd + tilbehør"
-                    class="img-cover">
+                  <img src="./assets/images/menu-1.jpg" width="150" height="150" loading="lazy"
+                    alt="Lammespyd + tilbehør" class="img-cover">
                 </figure>
 
                 <div>
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="" class="card-title" >Lammespyd + tilbehør</a>
+                      <span class="card-title">1- Lammekød tallerken (3spyd)</span>
                     </h3>
 
                     <span class="span title-2">195 <small>kr</small></span>
@@ -158,7 +181,7 @@
               </div>
             </li>
 
-            <li>
+            <li data-type="grill">
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
@@ -170,7 +193,7 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">grillmix (3spyd) kylling, kebab, kyllingevinger</a>
+                      <span class="card-title">2- grillmix (3spyd) kylling, kebab, kyllingevinger</span>
                     </h3>
 
                     <span class="span title-2">175 <small>kr</small></span>
@@ -185,19 +208,19 @@
               </div>
             </li>
 
-            <li>
+            <li data-type="grill">
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.jpg" width="100" height="100" loading="lazy" alt="kyllingevinger tallerken"
-                    class="img-cover">
+                  <img src="./assets/images/menu-3.jpg" width="100" height="100" loading="lazy"
+                    alt="kyllingevinger tallerken" class="img-cover">
                 </figure>
 
                 <div>
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">kyllingevinger tallerken (3 spyd)</a>
+                      <span class="card-title">3- kyllingevinger tallerken (3spyd)</span>
                     </h3>
 
                     <span class="span title-2">140 <small>kr</small></span>
@@ -212,7 +235,7 @@
               </div>
             </li>
 
-            <li>
+            <li data-type="grill">
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
@@ -224,7 +247,7 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">kalvekød tallerken (3 spyd)</a>
+                      <span class="card-title">4- kalvekød tallerken (3spyd)</span>
                     </h3>
 
                     <span class="span title-2">215 <small>kr</small></span>
@@ -239,19 +262,19 @@
               </div>
             </li>
 
-            <li>
+            <li data-type="grill">
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.jpg" width="100" height="100" loading="lazy" alt="kylling og kebab tallerken"
-                    class="img-cover">
+                  <img src="./assets/images/menu-5.jpg" width="100" height="100" loading="lazy"
+                    alt="kylling og kebab tallerken" class="img-cover">
                 </figure>
 
                 <div>
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">kylling og kebab tallerken (2spyd)</a>
+                      <span class="card-title">5- kylling og kebab tallerken (2spyd)</span>
                     </h3>
 
                     <span class="span title-2">150 <small>kr</small></span>
@@ -266,19 +289,19 @@
               </div>
             </li>
 
-            <li>
+            <li data-type="grill">
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.jpg" width="100" height="100" loading="lazy" alt="lammekoteletter tallerken"
-                    class="img-cover">
+                  <img src="./assets/images/menu-6.jpg" width="100" height="100" loading="lazy"
+                    alt="lammekoteletter tallerken" class="img-cover">
                 </figure>
 
                 <div style="flex-grow: 1;">
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">lammekoteletter tallerken</a>
+                      <span class="card-title">6- lammekoteletter tallerken</span>
                     </h3>
 
                     <span class="span title-2">195 <small>kr</small></span>
@@ -292,7 +315,535 @@
 
               </div>
             </li>
-            
+
+            <li data-type="grill">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-7.jpg" width="100" height="100" loading="lazy"
+                    alt="syrisk kebab tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">7- Syrisk kebab tallerken (3spyd)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-8.jpg" width="100" height="100" loading="lazy"
+                    alt="kylling og kalve tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">8- Kylling og kalve tallerken (2spyd)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-9.jpg" width="100" height="100" loading="lazy"
+                    alt="syrisk retter tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">9- Syrisk retter tallerken (kylling, kebab, falafel, sambusak, kibbeh,
+                        yabrak, forårsruller)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill-family">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-10.jpg" width="100" height="100" loading="lazy"
+                    alt="familier syrisk retter tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">10- Familier syrisk retter tallerken (4 spyd kylling, 4 spyd kebab, 4
+                        sambusak, 4 falafel, 4 yabrak, 4 kibbeh, 4 forårsruller)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød. (4 pers)
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill-family">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-11.jpg" width="100" height="100" loading="lazy"
+                    alt="special familiemix" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">11- Special familiemix (4 spyd kebab, 4 spyd lammekød, 4 spyd
+                        kalvekød)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød. (4 pers)
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill-family">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-12.jpg" width="100" height="100" loading="lazy"
+                    alt="familiemix tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">12- Familiemix tallerken (4 spyd kebab, 2 spyd lammekød, 2 spyd
+                        kyllingevinger, 4 spyd kylling)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød. (4 pers)
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill-family">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-13.jpg" width="100" height="100" loading="lazy" alt="Mad Magi mix"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">13- Mad Magi mix (4 spyd kebab, 2 spyd kylling, 2 spyd kyllingevinger,
+                        2
+                        spyd kalve, 2 spyd lam, lammekoteletter)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød. (4 pers)
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-14.jpg" width="100" height="100" loading="lazy" alt="laks tallerken"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">14- Laks tallerken</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-15.jpg" width="100" height="100" loading="lazy"
+                    alt="grillmix lam, kebab, kalve" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">15- Grillmix (3 spyd lam, kebab, kalve)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="grill">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-16.jpg" width="100" height="100" loading="lazy"
+                    alt="Glutenfri tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">16- Glutenfri tallerken (kylling, kebab, 3 yabrak, 3 falafel)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-17.jpg" width="100" height="100" loading="lazy" alt="Falafel tallerken"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">17- Falafel tallerken (6 stykker falafel, pommes frites)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med hummus, tabbouleh.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-18.jpg" width="100" height="100" loading="lazy" alt="Special tallerken"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">18- Special tallerken (2 falafel, 2 forårsruller, 1 yabrak, 1 kibbeh, 1
+                        sambusak)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med tabbouleh, arabisk brød, hummus, honningsauce.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li data-type="grill">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-19.jpg" width="100" height="100" loading="lazy"
+                    alt="grillmix kylling, lam, kebab" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">19- Grillmix (3 spyd kylling, lam, kebab)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tzatziki, hummus, tabbouleh og arabisk brød.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-20.jpg" width="100" height="100" loading="lazy"
+                    alt="Forårsruller tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">20- Forårsruller tallerken (7 stykker forårsruller)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Fyldt med kalvekød/grønsager, pommes frites, honningsauce.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="crispy">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-21.jpg" width="100" height="100" loading="lazy"
+                    alt="Crispy kylling tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">21- Crispy kylling tallerken (5 stykker crispy)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med pommes frites, ketchup.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="crispy">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-22.jpg" width="100" height="100" loading="lazy"
+                    alt="Kyllingenuggets tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">22- Kyllingenuggets tallerken (6 stykker)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med pommes frites, ketchup.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-26.jpg" width="100" height="100" loading="lazy" alt="Syrisk sambusak"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">26- Syrisk sambusak (5 stykker)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Fyldt med kød eller grønsager. Friture stegt.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-27.jpg" width="100" height="100" loading="lazy" alt="Syrisk kibbeh"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">27- Syrisk kibbeh (5 stykker)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Sprøde bulgurboller fyldt med hakket kød, løg og krydderier. Friture stegt.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-28.jpg" width="100" height="100" loading="lazy"
+                    alt="Syrisk yabrak tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">28- Syrisk yabrak tallerken (12 stykker)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Vinblade med ris og grøntsager.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-29.jpg" width="100" height="100" loading="lazy" alt="Vegansk tallerken"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">29- Vegansk tallerken (2 falafel, 2 sambusak, 2 yabrak, 1
+                        kibbeh)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ris, tabbouleh og hummus.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-30.jpg" width="100" height="100" loading="lazy"
+                    alt="Mad Magis Tabbouleh" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">30- Mad Magis Tabbouleh</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Finthakket persille, tomater, salat, agurk, løg, frisk mynte, bulgur, granatæble, citron,
+                    olivenolie, salt og fritteret arabisk brød.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-31.jpg" width="100" height="100" loading="lazy"
+                    alt="Tzatziki tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">31- Tzatziki tallerken</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Yoghurt med agurk, mynte og citron.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-32.jpg" width="100" height="100" loading="lazy" alt="Syrisk hummus"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">32- Syrisk hummus</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Kikærter most med tahin og krydderier.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-33.jpg" width="100" height="100" loading="lazy" alt="Baba Ghanoush"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">33- Baba Ghanoush (Syrisk)</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Aubergine most med persille, yoghurt, tahin og krydderier.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-34.jpg" width="100" height="100" loading="lazy"
+                    alt="Pommes frites tallerken" class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">34- Pommes frites tallerken</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Med ketchup.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-type="appetizers">
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-35.jpg" width="100" height="100" loading="lazy" alt="Hjemmelavet Chili"
+                    class="img-cover">
+                </figure>
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <span class="card-title">35- Hjemmelavet Chili</span>
+                    </h3>
+                    <span class="span title-2"><small>kr</small></span>
+                  </div>
+                  <p class="card-text label-1">
+                    Hjemmelavet chili sauce.
+                  </p>
+                </div>
+              </div>
+            </li>
+
           </ul>
 
           <a href="./menu.html" class="btn btn-primary">
@@ -311,8 +862,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer section has-bg-image text-center"
-    style="background-image: url('./assets/images/footer2.jpg')">
+  <footer class="footer section has-bg-image text-center" style="background-image: url('./assets/images/footer2.jpg')">
     <div class="container">
       <div class="footer-top grid-list">
         <div class="footer-brand has-before has-after">
@@ -334,7 +884,7 @@
           <li>
             <a href="https://www.facebook.com/madmagimunkebo" class="label-2 footer-link hover-underline">Facebook</a>
           </li>
-            <a href="https://maps.app.goo.gl/X3qsfHr4QRuSddfh6" class="label-2 footer-link hover-underline">Google Map</a>
+          <a href="https://maps.app.goo.gl/X3qsfHr4QRuSddfh6" class="label-2 footer-link hover-underline">Google Map</a>
           </li>
         </ul>
       </div>
@@ -346,77 +896,153 @@
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
 
-  <!-- JS -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- custom js -->
   <script src="./assets/js/script.js"></script>
-  
 
   <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const captionText = document.getElementById("caption");
-  const closeBtn = document.querySelector(".close");
+    // change pictures and tap on it
+    document.addEventListener("DOMContentLoaded", function () {
+      // === Lightbox Variables & Setup ===
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const captionText = document.getElementById("caption");
+      const closeBtn = document.querySelector(".close");
 
-  // كل الصور القابلة للتكبير
-  const images = document.querySelectorAll(".menu-card img, .img-cover");
-  const imgList = Array.from(images);
-  let currentIndex = -1;
+      const images = document.querySelectorAll(".menu-card img");
+      const imgList = Array.from(images);
+      let currentIndex = -1;
 
-  // عند الضغط على أي صورة
-  images.forEach((img, index) => {
-    img.style.cursor = "pointer";
-    img.addEventListener("click", function() {
-      currentIndex = index;
-      lightbox.style.display = "block";
-      lightboxImg.src = this.src;
-      captionText.innerHTML = this.alt || "";
-      document.body.style.overflow = "hidden"; // منع تمرير الصفحة
-    });
-  });
+      images.forEach((img, index) => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function () {
+          currentIndex = index;
+          lightbox.style.display = "block";
+          lightboxImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        });
+      });
 
-  // إغلاق عند الضغط على زر الإغلاق
-  closeBtn.onclick = function() {
-    lightbox.style.display = "none";
-    document.body.style.overflow = "auto";
-  };
-
-  // إغلاق عند الضغط خارج الصورة
-  lightbox.onclick = function(e) {
-    if (e.target === lightbox) {
-      lightbox.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-  };
-
-  // التعامل مع لوحة المفاتيح
-  document.addEventListener("keydown", function(e) {
-    if (lightbox.style.display === "block") {
-      if (e.key === "Escape") {
+      closeBtn.onclick = () => {
         lightbox.style.display = "none";
-        document.body.style.overflow = "auto";
-      } else if (e.key === "ArrowRight") {
-        currentIndex = (currentIndex + 1) % imgList.length;
-        lightboxImg.src = imgList[currentIndex].src;
-        captionText.innerHTML = imgList[currentIndex].alt || "";
-      } else if (e.key === "ArrowLeft") {
-        currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
-        lightboxImg.src = imgList[currentIndex].src;
-        captionText.innerHTML = imgList[currentIndex].alt || "";
+      };
+
+      lightbox.onclick = (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = "none";
+        }
+      };
+
+      document.addEventListener("keydown", function (e) {
+        if (lightbox.style.display === "block") {
+          if (e.key === "Escape") {
+            lightbox.style.display = "none";
+          } else if (e.key === "ArrowRight") {
+            currentIndex = (currentIndex + 1) % imgList.length;
+            lightboxImg.src = imgList[currentIndex].src;
+            captionText.innerHTML = imgList[currentIndex].alt;
+          } else if (e.key === "ArrowLeft") {
+            currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+            lightboxImg.src = imgList[currentIndex].src;
+            captionText.innerHTML = imgList[currentIndex].alt;
+          }
+        }
+      });
+
+      // === Lightbox Swipe Support on Mobile ===
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      lightboxImg.addEventListener("touchstart", function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+
+      lightboxImg.addEventListener("touchend", function (e) {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            currentIndex = (currentIndex + 1) % imgList.length;
+          } else {
+            currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+          }
+          lightboxImg.src = imgList[currentIndex].src;
+          captionText.innerHTML = imgList[currentIndex].alt;
+        }
+      });
+
+      // === Hero Slider Swipe Support on Mobile ===
+      const slider = document.querySelector("[data-hero-slider]");
+      const prevBtn = document.querySelector("[data-prev-btn]");
+      const nextBtn = document.querySelector("[data-next-btn]");
+
+      let startX = 0;
+      let endX = 0;
+
+      if (slider) {
+        slider.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          endX = startX;
+        }, { passive: true });
+
+        slider.addEventListener("touchend", (e) => {
+          endX = e.changedTouches[0].clientX;
+          const diff = startX - endX;
+
+          if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+              nextBtn.click(); // Swipe left → next
+            } else {
+              prevBtn.click(); // Swipe right → previous
+            }
+          }
+        }, { passive: true });
       }
-    }
-  });
-});
-</script>
+    });
 
-<!-- Image Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-  <div id="caption"></div>
+    // استبدل الكود الحالي بهذا الكود الصحيح
+    document.addEventListener("DOMContentLoaded", function () {
+      const categoryLinks = document.querySelectorAll('.navbar-list-menu .navbar-link');
+      const menuItems = document.querySelectorAll('.grid-list > li');
 
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
 
-</div>
+          // إزالة الحالة active من كل الأزرار
+          categoryLinks.forEach(l => l.classList.remove('active'));
+          // تفعيل الزر الحالي
+          link.classList.add('active');
+
+          const category = link.textContent.toLowerCase();
+
+          menuItems.forEach(item => {
+            if (category === 'all') {
+              item.style.display = 'block';
+            } else {
+              const itemType = item.getAttribute('data-type');
+              if (itemType === category) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <!-- ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Image Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
 </body>
+
 </html>
