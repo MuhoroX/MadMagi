@@ -70,7 +70,7 @@ allNavLinks.forEach(link => {
  */
 
 const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-scroll-top-btn]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 // عند الضغط على الزر
 backTopBtn.addEventListener("click", function (e) {
