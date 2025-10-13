@@ -1425,7 +1425,6 @@ textarea.input-field {
   }
 
 
-
   /**
    * REUSED STYLE
    */
@@ -1586,7 +1585,10 @@ textarea.input-field {
     bottom: 0;
     min-width: max-content;
   }
-
+  .-position {
+    right: 0;
+    bottom: -30px;
+}
 }
 
 @media (max-width: 575px)
@@ -2205,8 +2207,8 @@ position: absolute;
   background-color: rgba(59, 131, 246, 0.34); 
 }
 
-.food-badge.no-meat {
-  background-color: rgba(239, 68, 68, 0.9); 
+.food-badge.crispy{
+  background-color: rgba(254, 207, 0, 0.534); 
 }
 
 .menu-card > figure + div {
@@ -2220,4 +2222,10 @@ position: absolute;
 } */
  .title-wrapper {
   flex-grow: 0 !important;
+ }
+
+ .card-text-pommes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
  }
