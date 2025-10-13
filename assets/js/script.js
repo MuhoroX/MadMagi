@@ -72,6 +72,14 @@ allNavLinks.forEach(link => {
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
+// عند الضغط على الزر
+backTopBtn.addEventListener("click", function (e) {
+  e.preventDefault(); // يمنع السلوك الافتراضي للرابط
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // يجعل الحركة سلسة
+  });
+});
 let lastScrollPos = 0;
 
 
