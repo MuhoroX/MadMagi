@@ -306,7 +306,7 @@ body.nav-active { overflow: hidden; }
 .img-cover {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain;
+  object-fit: fill;
   object-position: center;
 }
 
@@ -430,8 +430,10 @@ body.nav-active { overflow: hidden; }
 
 .img-holder {
   overflow: hidden;
+  position: relative;
   background-color: var(--eerie-black-4);
-  max-width: 143px;
+  width: 140px;
+  height: 140px;
 }
 
 .btn-text {
@@ -1056,7 +1058,7 @@ max-width: max-content;
 
 .menu-card {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 20px;
 }
 
@@ -1531,6 +1533,11 @@ textarea.input-field {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    flex-grow: 0;
+  }
+
+  .title-wrapper .title-3 {
+    font-size: 1.95rem;
   }
 
   .menu-card .badge { margin-block-start: 0; }
@@ -1587,7 +1594,24 @@ textarea.input-field {
   .menu-card .card-banner {
     max-width: 134px;
   }
-
+    .title-wrapper .title-3 {
+    font-size: 1.6rem;
+  }
+  .card-text.label-1 {
+    font-size: var(--fontSize-label-2);
+  }
+  .menu-card .span {
+    margin-block: 3px;
+  }
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-start;
+  }
+  .title-wrapper .title-2 {
+    align-self: flex-end;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2159,3 +2183,41 @@ textarea.input-field {
     color: var(--gold-crayola);
 }
 
+.food-badge {
+position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 128, 0, 0.8);
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: var(--weight-bold);
+  padding: 0px 8px;
+  border-radius: 23px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.food-badge.vegan {
+  background-color: rgba(34, 197, 94, 0.39); 
+}
+
+.food-badge.gluten-free {
+  background-color: rgba(59, 131, 246, 0.34); 
+}
+
+.food-badge.no-meat {
+  background-color: rgba(239, 68, 68, 0.9); 
+}
+
+.menu-card > figure + div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* .grid-list li > div .card-text {
+  margin-top: auto;
+} */
+ .title-wrapper {
+  flex-grow: 0 !important;
+ }
