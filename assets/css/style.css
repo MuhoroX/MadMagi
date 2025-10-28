@@ -1359,7 +1359,11 @@ textarea.input-field {
   text-decoration: underline;
 }
 
-
+.smile {
+  display: flex;
+  justify-content: center;
+  
+}
 
 
 
